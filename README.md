@@ -1,6 +1,6 @@
 # SnapQR
 
-A Basic QR Code Generator made open source from chotuurl for all my fellow learners in CodingPandas....
+A Basic QR Code Generator from Project chotuurl for all my fellow learners in CodingPandas....
 
 --- Chotuurl as a whole was a big project still under development. The Qr Code Generator was just a tiny feature among all. Chotuurl Includes a Link-in-Generator, Advanced LInk Analytics for link tracking and so much more.
 
