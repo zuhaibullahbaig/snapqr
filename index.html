@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapQR</title>
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+   <div class="qrcodegenerator">
+    <div class="qrcodemain" id="qrcodemain">
+            <h1 class="generator-title"> SnapQr - QR Code Generator </h1>
+            <div class="form">
+                <div class="qrcode-main-btns">
+                <button class="go-back">Snap Qr</a>
+                    <button id="generate"> Generate Qr Code </button>    
+                </div>
+                <div class="qrcode-colors">
+                    <div class="qrcode-foreground">
+                        <h2> Foreground  </h2>
+                        
+                        <input class="color-input" type="color"  placeholder="Write your url here" id="forecolor"/> 
+                    </div>  
+                    <div class="background">
+                        <h2> Background  </h2>
+                        <input class="color-input" type="color" placeholder="Write your url here" id="backcolor" value="#ffffff"/>
+                    </div>
+                </div>
+                <div class="qr-code-style">
+                    <select id="dots-style" class="dots-selection-select">
+                        <option value="dots">PNG</option>
+                        <option value="square">PNG</option>
+                        <option value="extra-rounded">PNG</option>
+                        <option value="rounded">PNG</option>
+                    </select>
+                    <select id="out-style" class="dots-selection-select">
+                        <option value="dots">PNG</option>
+                        <option value="square">PNG</option>
+                        <option value="extra-rounded">PNG</option>
+                    </select>
+                    <select id="in-style" class="dots-selection-select">
+                        <option value="dot">PNG</option>
+                        <option value="square">PNG</option>
+                    </select>
+                    <div class="qr-code-style-item qr-code-style-item-one">
+                         <h3> Dots  </h3>
+                         <div class="main-qr-style">
+                            <img src="images/dots.png" class="img-active" id="dots-dot">
+                            <img src="images/square.png" id="dots-square">
+                            <img src="images/rounded.png" id="dots-rounded">
+                            <img src="images/extra-rounded.png" id="dots-extra-rounded">
+
+                         </div>
+                    </div>
+                    <div class="qr-code-style-item qr-code-style-item-two">
+                        <h3> Marker Border  </h3>
+                        <div class="main-qr-style">
+                           <img src="images/dotout.png"  class="img-active" id="out-dots">
+                           <img src="images/squareout.png" id="out-square">
+                           <img src="images/roundedout.png" id="out-rounded">
+                        </div>
+                   </div>
+                   <div class="qr-code-style-item qr-code-style-item-three">
+                    <h3> Market Center  </h3>
+                    <div class="main-qr-style">
+                       <img src="images/dotinner.png"  class="img-active" id="in-dots">
+                       <img src="images/squarein.png" id="in-square">
+                    </div>
+               </div>
+                </div>
+                
+                <h2> Paste/Write Your url here  </h2>
+
+                <input class="url-input" type="text" placeholder='write your url here..' id="url" />
+              
+            
+                <div class="download-section" style="margin-top: 0.4cm;">
+                    <label> Download Type</label>
+                    <select id="download-type">
+                        <option value="png">PNG</option>
+                        <option value="svg">SVG</option>
+                        <option value="jpg">JPG</option>
+                    </select>
+                </div>
+              
+                <p style="font-size: 29px; font-weight: bolder; color: white;"> Use our url shortener to shorten links </p>
+            </div>
+    </div>
+    <div class="generated-qr generated-qr-active" id="generated-qr">
+        <div class="generated-qr-container" >
+            <i class="fas fa-times" id="cross"></i>
+
+              <div id="canvas" style="margin: 0 auto; text-align: center;">
+
+              </div>
+        <button id="download"> Download Now </button>
+              
+        </div>
+    </div>
+
+</div>
+    <script src="main.js" type="text/javascript"></script>
+</body>
+</html>
