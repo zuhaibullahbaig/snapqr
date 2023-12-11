@@ -1,20 +1,22 @@
-out_style = document.getElementById('out-style');
-in_style = document.getElementById('in-style');
-dots_style = document.getElementById('dots-style');
+"use strict";
+
+let out_style = document.getElementById('out-style');
+let in_style = document.getElementById('in-style');
+let dots_style = document.getElementById('dots-style');
 
 
 
 function createQRcode(){
 
     document.getElementById('canvas').innerHTML = '';
-    container = document.getElementById('generated-qr');
+    let container = document.getElementById('generated-qr');
     container.classList.remove('generated-qr-active');
-    qrcodemain = document.getElementById('qrcodemain');
+    let qrcodemain = document.getElementById('qrcodemain');
     qrcodemain.classList.add('options-active')
-    forecolor = document.getElementById('forecolor').value;
-    backcolor = document.getElementById('backcolor').value;
+    let forecolor = document.getElementById('forecolor').value;
+    let backcolor = document.getElementById('backcolor').value;
 
-    url = document.getElementById('url').value;
+    let url = document.getElementById('url').value;
 
     if (url==""){
         url = 'random'
@@ -51,12 +53,12 @@ function download_Qr(){
 
   
     document.getElementById('canvas').innerHTML = '';
-    container = document.getElementById('generated-qr');
+    let container = document.getElementById('generated-qr');
     container.classList.remove('generated-qr-active');
-    forecolor = document.getElementById('forecolor').value;
-    backcolor = document.getElementById('backcolor').value;
+    let forecolor = document.getElementById('forecolor').value;
+    let backcolor = document.getElementById('backcolor').value;
 
-    url = document.getElementById('url').value;
+    let url = document.getElementById('url').value;
 
     if (url==""){
         url = 'random'
@@ -87,7 +89,7 @@ function download_Qr(){
     });
     newqrCode.append(document.getElementById("canvas"));
 
-    download_type = document.getElementById('download-type').value;
+    let download_type = document.getElementById('download-type').value;
     console.log(download_type);
     if (download_type == 'jpg'){
         newqrCode.download({ name: "qr", extension: "jpg" });
@@ -100,9 +102,9 @@ function download_Qr(){
 }
 
 function remove_class(){
-    container = document.getElementById('generated-qr');
+    let container = document.getElementById('generated-qr');
     container.classList.add('generated-qr-active');
-    qrcodemain = document.getElementById('qrcodemain');
+    let qrcodemain = document.getElementById('qrcodemain');
     qrcodemain.classList.remove('options-active')
 }
 document.getElementById('download').addEventListener('click', download_Qr);
@@ -114,10 +116,10 @@ document.getElementById('cross').addEventListener('click', remove_class);
 
 // DOTS
 // 
-dots_extra_rounded= document.getElementById('dots-extra-rounded');
-dots_dot = document.getElementById('dots-dot');
-dots_square = document.getElementById('dots-square');
-dots_rounded = document.getElementById('dots-rounded');
+let dots_extra_rounded= document.getElementById('dots-extra-rounded');
+let dots_dot = document.getElementById('dots-dot');
+let dots_square = document.getElementById('dots-square');
+let dots_rounded = document.getElementById('dots-rounded');
 
 function dots_extra_rounded_updated(){
     dots_style.value = 'extra-rounded';
@@ -163,9 +165,9 @@ dots_extra_rounded.addEventListener('click', dots_extra_rounded_updated)
 // DOTS
 // 
 
-out_dot = document.getElementById('out-dots');
-out_square = document.getElementById('out-square');
-out_rounded = document.getElementById('out-rounded');
+let out_dot = document.getElementById('out-dots');
+let out_square = document.getElementById('out-square');
+let out_rounded = document.getElementById('out-rounded');
 
 function out_dot_updated(){
     out_style.value = 'dots';
@@ -197,8 +199,8 @@ out_rounded.addEventListener('click', out_rounded_updated)
 
 // in
 
-in_dots = document.getElementById('in-dots');
-in_square = document.getElementById('in-square');
+let in_dots = document.getElementById('in-dots');
+let in_square = document.getElementById('in-square');
 
 function in_dots_updated(){
     in_style.value = 'dot';
