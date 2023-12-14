@@ -1,4 +1,4 @@
-# SnapQR
+# SnapQR 
 
 A Basic QR Code Generator from Project chotuurl for all my fellow learners in CodingPandas....
 
